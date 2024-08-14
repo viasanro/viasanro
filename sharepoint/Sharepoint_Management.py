@@ -1,5 +1,5 @@
 # Databricks notebook source
-from office365.runtime.auth.authentication_context import AuthenticationContext
+from office365.runtime.auth.authentication_context import ClientCredential
 from office365.sharepoint.client_context import ClientContext
 from office365.sharepoint.files.file import File
 
@@ -34,9 +34,8 @@ class SharepointManagement():
   def __conectar(self):
     """Establece la conexion a Sharepoint y devuelve el contexto de conexión."""
     try:
-      ctx_auth = AuthenticationContext(self.site_url)
-      ctx_auth.acquire_token_for_user(self.user, self.password)
-      ctx = ClientContext(self.site_url, ctx_auth)
+      credentials = ClientCredential(self.user, self.password)
+      ctx = ClientContext(self.site_url).with_credentials(credentials)
       return ctx
     except Exception as e:
       return e
