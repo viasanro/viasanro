@@ -1,2 +1,2 @@
 # Comandos para Git
-Aqui les dejo algunos comandos utilies para git con una breve descripcion de cada uno.
+Aqui listo algunos comandos que me resultaron utiles para GIT con una breve descripcion de cada uno.
