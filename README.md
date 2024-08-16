@@ -1,4 +1,4 @@
-Hola a todos 👋, soy Victor Santos y llevo ya algunos años trabajando en el apasionante mundo de los datos 👀.
+Hola a todos 👋, soy Victor Santos y llevo ya algunos años trabajando en el área de data 👀.
 La idea de este espacio es ir compartiendo conocimiento 🧠, mientras voy documentando 📄 procesos, soluciones, ideas, etc. que me resultaron útil en algún momento 🦾.
 Mi lengua nativa es español 🇵🇾.
 Sientanse libres de dejar sus comentarios y colaborar así vamos aprendiendo juntos 🌱.
