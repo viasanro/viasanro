@@ -1,3 +1,5 @@
+## Creacion de una SCD Type2.
+
 Para este ejemplo utilizamos un motor SQL SEVER en el cual creamos una base de datos BD_DWH.
 
 En el ejemplo asumimos que tenemos creada nuestra tabla dim_productos en el esquema dim. Esta tabla tiene 
