@@ -8,7 +8,7 @@ git config --global -user.email "youremail@example.com"
 git config --global -user.name "yourusername"
 #Agrega al area de staging los cambios realizados en el directorio 
 git add .
-#Agrega al repositorio local los cambios del listos en el area de staging
+#Agrega al repositorio local los cambios listos en el area de staging
 git commit -m "mensaje"
 #Muestra el estado actual del area de staging
 git status
@@ -54,7 +54,7 @@ git pull origin main --allow-unrelated-histories
 git push origin master
 #Cambia la URL del repositorio remoto
 git remote set-url origin URL_SSH_REMOTO
-#Muestra una estructura de arblo del git log
+#Muestra una estructura de arbol del git log
 git log --all --graph --decorate --oneline
 #Agrega un alias al comando
 alias arbolito "git log --all --graph --decorate --oneline"
