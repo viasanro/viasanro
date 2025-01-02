@@ -11,5 +11,5 @@ Tambien logueamos el estado de ejecucion en una tabla de auditoria llamada audit
 
 El proceso se divide en 3 pasos:
 1) Insertar los registros nuevos (Que no existian previamente)
-2) Insertar registros que "nuevos" (Ya existian previamente en la tabla target pero sufrieron cambios)
+2) Insertar registros actualizados (Ya existian previamente en la tabla target pero sufrieron cambios)
 3) Actualizar los registros existentes en el target que sufrieron alguna modificacion y fueron reemplazados por los del punto 2
