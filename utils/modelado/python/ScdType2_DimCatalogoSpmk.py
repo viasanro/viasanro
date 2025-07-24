@@ -29,7 +29,7 @@ df_catalogo_spmk.createOrReplaceTempView('AuxSourceCatalogoSpmk')
 
 # DBTITLE 1,Change Data Capture
 try:
-  path_dim_catalogo = '/mnt/consumezone/Chile/Logistica/Embotelladora/DimCatalogoSpmk'
+  path_dim_catalogo = '/mnt/zone/Country/Domain/SubDomain/DimCatalogoSpmk'
   df_dim_catalogo = spark.read.format('parquet').load(path_dim_catalogo)
   df_dim_catalogo.createOrReplaceTempView('DimCatalogoSpmk')
 
@@ -73,7 +73,7 @@ source_catalogo_spmk.createOrReplaceTempView('SourceCatalogoSpmk')
 
 # DBTITLE 1,Nueva Dim Sin PK
 try:
-  path_dim_catalogo = '/mnt/consumezone/Chile/Logistica/Embotelladora/DimCatalogoSpmk'
+  path_dim_catalogo = '/mnt/zone/Country/Domain/SubDomain/DimCatalogoSpmk'
   df_dim_catalogo = spark.read.format('parquet').load(path_dim_catalogo)
   df_dim_catalogo.createOrReplaceTempView('DimCatalogoSpmk')
 
@@ -175,20 +175,11 @@ dim_catalogo_spmk.display()
 
 try:
   # Saving on DL
-  cz_path = '/mnt/consumezone/Chile/Logistica/Embotelladora/DimCatalogoSpmk'
+  cz_path = '/mnt/zonoe/country/Domain/SubDomain/DimCatalogoSpmk'
   dim_catalogo_spmk.write.mode('overwrite').format('parquet').save(cz_path)
 except Exception as e:
   raise e
 
 # COMMAND ----------
 
-dbutils.notebook.run("/LAS/Templates/Cz_Presto_Template_Db_V2",300,
-                     {"prestoTable":"dim_catalogo_spmk", 
-                      "pathCz":"/consumezone/Chile/Logistica/Embotelladora/DimCatalogoSpmk", 
-                      "prestoSchema":"ch_logistica",
-                      "partitionByField":"-", 
-                      "tipoCarga":"FULL"})
-
-# COMMAND ----------
-
-spark.read.format('parquet').load('/mnt/consumezone/Chile/Logistica/Embotelladora/DimCatalogoSpmk').display()
+spark.read.format('parquet').load('/mnt/zone/Country/Domain/SubDomain/DimCatalogoSpmk').display()
