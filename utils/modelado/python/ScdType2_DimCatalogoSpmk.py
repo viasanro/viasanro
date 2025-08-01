@@ -4,8 +4,8 @@ from pyspark.sql.functions import md5, concat, col
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC refresh table embotelladora.tbl_catalogo_instock;
-# MAGIC refresh table embotelladora.tmp_catalogo_instock;
+# MAGIC refresh table schemax.tbl_catalogo_instock;
+# MAGIC refresh table schemax.tmp_catalogo_instock;
 
 # COMMAND ----------
 
@@ -20,7 +20,7 @@ df_catalogo_spmk = spark.sql("""
                             ,cast(getdate() as date) as fecha_ini
                             ,'9999-12-31' as fecha_fin
                             ,'S' as status
-                          from embotelladora.tbl_catalogo_instock
+                          from schemax.tbl_catalogo_instock
                         """)
 df_catalogo_spmk = df_catalogo_spmk.withColumn("checksum", md5(concat(df_catalogo_spmk.bandera, df_catalogo_spmk.cadena, df_catalogo_spmk.codigo_cadena, df_catalogo_spmk.codigo_abi, df_catalogo_spmk.activo_cod_abi, df_catalogo_spmk.catalogado)))
 df_catalogo_spmk.createOrReplaceTempView('AuxSourceCatalogoSpmk')
