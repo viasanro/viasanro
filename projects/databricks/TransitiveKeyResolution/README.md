@@ -16,10 +16,10 @@ Resolución determinista. <br><br>
 >*Enfoque Técnico: <br>
 
 Patrón: Agrupar -> Expandir -> Resolver -> Re-Agrupar <br>
-- collect_list(): Agrupa todas las claves candidatas en una colección por clave principal. <br>
-- explode(): Se expanden las opciones para analizarlas individualmente. <br>
-- row_number(): Window + criterio deterministico. <br>
-- group_by(): Finalmente restuaramos la granularidad. <br><br>
+- **collect_list()**: Agrupa todas las claves candidatas en una colección por clave principal. <br>
+- **explode()**: Se expanden las opciones para analizarlas individualmente. <br>
+- **row_number()**: Window + criterio deterministico. <br>
+- **group_by()**: Finalmente restuaramos la granularidad. <br><br>
 
 >*Objetivo:<br>
 
