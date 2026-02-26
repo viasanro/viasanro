@@ -25,7 +25,7 @@ Patrón: Agrupar -> Expandir -> Resolver -> Re-Agrupar <br>
 
 Evaluar todas las opciones posibles bajo control y seleccionar una sola forma determinística.<br><br>
 
-*Aprendizaje:<br>
+>*Aprendizaje:<br>
 
 Con esto logramos una estrategia de resolución determinística de claves ambiguas en relaciones 1:N mediante control explícito de granularidad y evaluación exhaustiva de candidatos.<br><br>
 
