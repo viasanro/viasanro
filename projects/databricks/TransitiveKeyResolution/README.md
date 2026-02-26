@@ -11,22 +11,25 @@ Sistema A -> ventas <br>
 Sistema B -> forecast <br>
 Tabla Transitiva -> productos <br>
 Problema 1:N <br>
-Resolución determinista. <br>
+Resolución determinista. <br><br>
 
 >*Enfoque Técnico: <br>
+
 Patrón: Agrupar -> Expandir -> Resolver -> Re-Agrupar <br>
 - collect_list(): Agrupa todas las claves candidatas en una colección por clave principal. <br>
 - explode(): Se expanden las opciones para analizarlas individualmente. <br>
 - row_number(): Window + criterio deterministico. <br>
-- group_by(): Finalmente restuaramos la granularidad. <br>
+- group_by(): Finalmente restuaramos la granularidad. <br><br>
 
->*Objetivo:<br> 
-Evaluar todas las opciones posibles bajo control y seleccionar una sola forma determinística.<br>
+>*Objetivo:<br>
+
+Evaluar todas las opciones posibles bajo control y seleccionar una sola forma determinística.<br><br>
 
 >*Aprendizaje:<br>
-Con esto logramos una estrategia de resolución determinística de claves ambiguas en relaciones 1:N mediante control explícito de granularidad y evaluación exhaustiva de candidatos.
+Con esto logramos una estrategia de resolución determinística de claves ambiguas en relaciones 1:N mediante control explícito de granularidad y evaluación exhaustiva de candidatos.<br><br>
 
-> ¿Qué resolvimos? <br>
+*¿Qué resolvimos? <br>
+
 - La apertura 1:N <br>
 - La ambigüedad del mapeo <br>
 - Sin duplicar métricas <br>
