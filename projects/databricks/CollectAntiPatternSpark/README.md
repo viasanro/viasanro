@@ -10,7 +10,7 @@ esto derivo en lo siguiente:<br>
 collect() es un antipatrón de Spark ya que no trabaja de forma distribuida y obliga a mover todos los datos de dicho dataframe al Driver,<br>
 esto no afecta si el dataset es pequeño, pero el problema real está cuando utilizamos este dataframe para cruzarlo con otro.<br>
 Por ejemplo en nuestro caso si hacemos algo como:<br><br>
->for row in small_data:<br> df_big = df_big.filter(df_big.descripcion == row.descripcion)<br>
+>for row in small_data:<br> &nbsp;&nbsp;&nbsp;&nbsp; df_big = df_big.filter(df_big.descripcion == row.descripcion)<br>
 
 Aquí pasa lo siguiente:<br>
 - El loop es en el driver.<br>
