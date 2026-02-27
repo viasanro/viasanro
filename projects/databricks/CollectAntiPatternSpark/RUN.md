@@ -1,7 +1,8 @@
 ## Asunciones
 **Datasets**<br>
 - Por cuestiones de simplificación, se generaron 2 datsets, similares en estructura pero identicos en valores.<br>
-- La función de transformación se simplifica con fines didácticos.<br><br>
+- La función de transformación se simplifica con fines didácticos.<br>
+- En el código se encuentran ambas formas de procesar la info, iterando de a 1 y por lotes, esto a modo de demostración.<br><br>
 
 ## Como ejecutarlo en Databricks<br>
 1. Abre tu Workspace en Databricks<br>
