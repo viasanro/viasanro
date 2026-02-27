@@ -1,4 +1,4 @@
-**collect() - Anti Patrón en Spark<br><br>
+**collect() - Anti Patrón en Spark**<br><br>
 >Problemática:<br>
 
 El escenario es el siguiente, se necesita realizar una transformación de datos iterando sobre los registros de un dataframe de spark;<br>
@@ -11,7 +11,8 @@ collect() es un antipatrón de Spark ya que no trabaja de forma distribuida y ob
 esto no afecta si el dataset es pequeño, pero el problema real está cuando utilizamos este dataframe para cruzarlo con otro.<br>
 Por ejemplo en nuestro caso si hacemos algo como:<br><br>
 >for row in small_data:<br>
-    df_big = df_big.filter(df_big.descripcion == row.descripcion) <br><br>
+    df_big = df_big.filter(df_big.descripcion == row.descripcion)
+<br><br>
 Aquí pasa lo siguiente:<br>
 - El loop es en el driver.<br>
 - Cada iteración crea una transformación nueva.<br>
@@ -32,7 +33,7 @@ Por otro lado, el chunked join podría ser una solución válida cuando:<br>
 - El shuffle es demasiado grande.<br>
 - El cluster es pequeño.<br>
 - El driver se satura.<br>
-- Broadcast join no resuelve tu problema.<br>
+- Broadcast join no resuelve tu problema.<br><br>
 
 >¿Qué resolvimos? <br>
 
